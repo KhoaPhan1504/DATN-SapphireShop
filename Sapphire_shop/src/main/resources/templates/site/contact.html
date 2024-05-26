@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="M_Adnan">
+<title>SAPPHIRE - LIÊN HỆ</title>
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- JavaScripts -->
+<script src="js/modernizr.js"></script>
+
+<!-- Online Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="position-center-center">
+    <div class="ldr"></div>
+  </div>
+</div>
+
+<!-- Wrap -->
+<div id="wrap"> 
+  
+  <!-- header -->
+  <header th:replace="~{/site/fragments/header :: header}"></header>
+  
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>LIÊN HỆ CHÚNG TÔI NGAY</h4>
+        <ol class="breadcrumb">
+          <li><a href="#">Trang chủ</a></li>
+          <li class="active">Liên hệ</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!--======= CONATACT  =========-->
+    <section class="contact padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="contact-form">
+          <h5>VUI LÒNG ĐIỀN ĐẦY ĐỦ THÔNG TIN:</h5>
+          <div class="row">
+            <div class="col-md-8"> 
+              
+              <!--======= Success Msg =========-->
+              <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Cảm ơn. Thông điệp của bạn đã được gửi</div>
+              
+              <!--======= FORM  =========-->
+              <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
+                <ul class="row">
+                  <li class="col-sm-6">
+                    <label>Họ và tên *
+                      <input type="text" class="form-control" name="name" id="name" placeholder="">
+                    </label>
+                  </li>
+                  <li class="col-sm-6">
+                    <label>Email *
+                      <input type="text" class="form-control" name="email" id="email" placeholder="">
+                    </label>
+                  </li>
+                  <li class="col-sm-6">
+                    <label>Điện thoại *
+                      <input type="text" class="form-control" name="company" id="company" placeholder="">
+                    </label>
+                  </li>
+                  <li class="col-sm-6">
+                    <label>Địa chỉ
+                      <input type="text" class="form-control" name="website" id="website" placeholder="">
+                    </label>
+                  </li>
+                  <li class="col-sm-12">
+                    <label>Nội dung
+                      <textarea class="form-control" name="message" id="message" rows="5" placeholder=""></textarea>
+                    </label>
+                  </li>
+                  
+                  <!-- onClick="proceed(); -->
+                  <li class="col-sm-12">
+                    <button type="submit" value="submit" class="btn" id="btn_submit">GỬI</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            
+            <!--======= ADDRESS INFO  =========-->
+            <div class="col-md-4">
+              <div class="contact-info">
+                <h6>ĐỊA CHỈ</h6>
+                <ul>
+                  <li> <i class="icon-map-pin"></i> The Light, Tố Hữu, Trung Văn,<br>
+                    Nam Từ Liêm, Hà Nội.</li>
+                  <li> <i class="icon-call-end"></i> 0865.207.306</li>
+                  <li> <i class="icon-envelope"></i> <a href="#" target="_top">Khoahttt01@gmail.com</a> </li>
+                  <li>
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat turpis, pellentesque non leo eget.</p>-->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--======= MAP =========-->
+    <div id="map"></div>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container">
+
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>Chúng tôi có thể giúp bạn</h4>
+          <p>Hãy đến với chúng tôi và mọi yêu cầu, mọi mong muốn của quý khách sẽ được hỗ trợ tận tình.</p>
+        </div>
+
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="https://www.facebook.com/phananhkhoa150402"><i class="icon-social-facebook"></i></a></li>
+          <li><a href="https://twitter.com/Nupacachi1504"><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- News Letter -->
+    <section class="news-letter padding-top-150 padding-bottom-150">
+      <div class="container">
+        <div class="heading light-head text-center margin-bottom-30">
+          <h4>THÔNG TIN</h4>
+          <span>Hãy gửi mail tới chúng tôi để đăng kí nhận những thông tin mới nhất về các mặt hàng thời trang. </span> </div>
+        <form>
+          <input type="email" placeholder="Nhập mail của bạn" required>
+          <button type="submit">GỬI</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  
+  <!--======= FOOTER =========-->
+  <footer th:replace="~{/site/fragments/footer :: footer}"></footer>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/own-menu.js"></script> 
+<script src="js/jquery.lighter.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.t.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script> 
+<script src="js/main.js"></script> 
+
+<!-- Begin Map Script --> 
+<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script> 
+<script type="text/javascript">
+/*==========  Map  ==========*/
+var map;
+function initialize_map() {
+if ($('#map').length) {
+	var myLatLng = new google.maps.LatLng(-37.814199, 144.961560);
+	var mapOptions = {
+		zoom: 17,
+		center: myLatLng,
+		scrollwheel: false,
+		panControl: false,
+		zoomControl: true,
+		scaleControl: false,
+		mapTypeControl: false,
+		streetViewControl: false
+	};
+	map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		tittle: 'Envato',
+		icon: './images/map-locator.png'
+	});
+} else {
+	return false;
+}}
+google.maps.event.addDomListener(window, 'load', initialize_map);
+</script>
+</body>
+</html>

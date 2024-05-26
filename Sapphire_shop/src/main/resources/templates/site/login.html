@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="M_Adnan">
+<title>SAPPHIRE - ĐĂNG NHẬP</title>
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/ionicons.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- JavaScripts -->
+<script src="js/modernizr.js"></script>
+
+<!-- Online Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="position-center-center">
+    <div class="ldr"></div>
+  </div>
+</div>
+
+<!-- Wrap -->
+<div id="wrap"> 
+  
+  <!-- header -->
+  <header th:replace="~{/site/fragments/header :: header}"></header>
+  
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>ĐĂNG NHẬP</h4>
+        <p>Hãy đăng nhập ngay để mua hàng nếu bạn đã có tài khoản.</p>
+        <ol class="breadcrumb">
+          <li><a href="#">Cửa hàng</a></li>
+          <li><a href="#">Trang</a></li>
+          <li class="active">Đăng nhập</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!--======= PAGES INNER =========-->
+    <section class="chart-page padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Payments Steps -->
+        <div class="shopping-cart"> 
+          
+          <!-- SHOPPING INFORMATION -->
+          <div class="cart-ship-info">
+            <div class="row"> 
+              
+              <!-- ESTIMATE SHIPPING & TAX -->
+              <div class="col-sm-7">
+                <h6>ĐĂNG NHẬP TÀI KHOẢN CỦA BẠN</h6>
+                <div class="alert alert-danger col-6" th:if="${error}" th:text="${error}"></div>
+                <form th:action="@{/doLogin}" method="post">
+                  <ul class="row">
+                  
+                    <!-- Name -->
+                    <li class="col-md-12">
+                      <label> TÊN TÀI KHOẢN(* ID LOGIN)
+                        <input name="customerId" type="text" value="" placeholder="" required="required">
+                      </label>
+                    </li>
+                    
+                    <!-- LAST NAME -->
+                    <li class="col-md-12">
+                      <label> MẬT KHẨU
+                        <input type="password" id="myPass" name="password" value="" placeholder="">
+                      </label>
+                    </li>
+                    
+                    <!-- LOGIN -->
+                    <li class="col-md-4">
+                      <button type="submit" class="btn">ĐĂNG NHẬP</button>
+                    </li>
+                    
+                    <!-- CREATE AN ACCOUNT -->
+                    <li class="col-md-4">
+                      <div class="checkbox margin-0 margin-top-20">
+                        <input id="checkbox1" class="styled" type="checkbox">
+                        <label for="checkbox1" onclick="hidePass()"> Hiện mật khẩu</label>
+                      </div>
+                    </li>
+                    
+                    <!-- FORGET PASS -->
+                    <li class="col-md-4">
+                      <div class="checkbox margin-0 margin-top-20 text-right">
+                        <a href="#.">Quên mật khẩu?</a>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+                
+                 <!-- show password -->
+				<script>
+					function hidePass() {
+						var x = document.getElementById("myPass");
+						if (x.type === "password") {
+							x.type = "text";
+						} else {
+							x.type = "password";
+						}
+					}
+				</script>
+                
+              </div>
+              
+              <!-- SUB TOTAL -->
+              <div class="col-sm-5">
+                <h6>ĐĂNG NHẬP VỚI</h6>
+                
+                <ul class="login-with">
+                	<li>
+                    	<a href="#."><i class="fa fa-facebook"></i>FACEBOOK</a>
+                    
+                    </li>
+                    
+                    <li>
+                    	<a href="#."><i class="fa fa-google"></i>GOOGLE</a>
+                    
+                    </li>
+                    
+                    <li>
+                    	<a href="#."><i class="fa fa-twitter"></i>TWITTER</a>
+                    
+                    </li>
+                
+                </ul>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container">
+
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>Chúng tôi có thể giúp bạn</h4>
+          <p>Hãy đến với chúng tôi và mọi yêu cầu, mọi mong muốn của quý khách sẽ được hỗ trợ tận tình.</p>
+        </div>
+
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="https://www.facebook.com/phananhkhoa150402"><i class="icon-social-facebook"></i></a></li>
+          <li><a href="https://twitter.com/Nupacachi1504"><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- News Letter -->
+    <section class="news-letter padding-top-150 padding-bottom-150">
+      <div class="container">
+        <div class="heading light-head text-center margin-bottom-30">
+          <h4>THÔNG TIN</h4>
+          <span>Hãy gửi mail tới chúng tôi để đăng kí nhận những thông tin mới nhất về các mặt hàng thời trang. </span> </div>
+        <form>
+          <input type="email" placeholder="Nhập mail của bạn" required>
+          <button type="submit">GỬI</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  
+  <!--======= FOOTER =========-->
+  <footer th:replace="~{/site/fragments/footer :: footer}"></footer>
+  
+  <!--======= RIGHTS =========--> 
+  
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/own-menu.js"></script> 
+<script src="js/jquery.lighter.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.t.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.tp.min.js"></script> 
+<script src="js/main.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>
